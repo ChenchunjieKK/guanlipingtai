@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .container {
+            width: 1226px;
+            margin: 0 auto;
+        }
+
+
+        .header {
+            background: #333;
+        }
+
+
+        .header .menu {
+            float: left;
+            color: white;
+        }
+
+
+        .header a {
+            color: #b0b0b0;
+            line-height: 60px;
+            display: inline-block;
+            font-size: 15px;
+            margin-right: 10px;
+
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            color: white;
+        }
+
+
+
+        .sub-header .logo a {
+            margin-top: 22px;
+            display: inline-block
+        }
+
+        .sub-header .logo a img {
+            height: 56px;
+            width: 56px;
+        }
+
+
+
+        .sub-header .menu-list a {
+            display: inline-block;
+            padding: 0 10px;
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .sub-header .menu-list a:hover {
+            color: #ff6700;
+        }
+
+
+
+        .slider .sd-img {
+            width: 1226px;
+            height: 600px;
+        }
+
+        .news{
+            margin-top: 14px;
+        }
+
+
+        .news .channel .item a{
+            display: inline-block;
+            font-size: 12px;
+            padding-top: 18px;
+            color: #fff;
+            text-decoration: none;
+
+            opacity: 0.7;
+        }
+        .news .channel .item a:hover{
+            opacity: 1;
+        }
+        .news .channel .item  img{
+            height: 24px;
+            width: 24px;
+            display: block;
+            margin: 0 auto 4px;
+
+        }
+
+        .news .list-item {
+            width: 280px;
+            height: 170px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="menu">
+            <a href="/check/list/">账单管理</a>
+            <a href="https://www.mi.com/">待办事项管理</a>
+            <a href="https://www.mi.com/">日志管理</a>
+            <a href="/celery/test/">celery实现并发异步</a>
+
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<div style="height: 20px">
+
+</div>
+
+
+
+<div class="slider">
+    <div class="container">
+        <div class="sd-img">
+            <img src="../static/img/03.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+<div class="news">
+    <div class="container">
+
+        <div class="list-item left" style="margin-left: 20px">
+            <img src="../static/img/04.jpg"/>
+        </div>
+        <div class="list-item left" style="margin-left: 20px">
+            <img src="../static/img/05.jpg"/>
+        </div>
+        <div class="list-item left" style="margin-left: 20px">
+            <img src="../static/img/06.jpg"/>
+        </div>
+        <div class="list-item left" style="margin-left: 20px">
+            <img src="../static/img/02.jpg"/>
+        </div>
+
+        <div class="clear:both"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

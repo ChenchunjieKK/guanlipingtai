@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.4.1/css/bootstrap.min.css' %}">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .container {
+            width: 1226px;
+            margin: 0 auto;
+        }
+
+
+        .header {
+            background: #333;
+        }
+
+
+        .header .menu {
+            float: left;
+            color: white;
+        }
+
+
+        .header a {
+            color: #b0b0b0;
+            line-height: 60px;
+            display: inline-block;
+            font-size: 15px;
+            margin-right: 10px;
+
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            color: white;
+        }
+
+
+
+        .sub-header .logo a {
+            margin-top: 22px;
+            display: inline-block
+        }
+
+        .sub-header .logo a img {
+            height: 56px;
+            width: 56px;
+        }
+
+
+
+        .sub-header .menu-list a {
+            display: inline-block;
+            padding: 0 10px;
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .sub-header .menu-list a:hover {
+            color: #ff6700;
+        }
+
+
+        .news .channel .item a{
+            display: inline-block;
+            font-size: 12px;
+            padding-top: 18px;
+            color: #fff;
+            text-decoration: none;
+
+            opacity: 0.7;
+        }
+        .news .channel .item a:hover{
+            opacity: 1;
+        }
+        .news .channel .item  img{
+            height: 24px;
+            width: 24px;
+            display: block;
+            margin: 0 auto 4px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="menu">
+            <a href="/check/list/">账单管理</a>
+            <a href="https://www.mi.com/">待办事项管理</a>
+            <a href="https://www.mi.com/">日志管理</a>
+
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</div>
+
+<div style="height: 20px">
+
+</div>
+
+<div style="margin-bottom: 10px">
+            <a class="btn btn-success" href="/check/add/">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                新建账单
+            </a>
+            <a class="btn btn-success" href="/check/deplay/">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                每日汇总
+            </a>
+        </div>
+
+
+
+
+
+
+ <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                用户列表
+            </div>
+
+            <!-- Table -->
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>费用</th>
+                    <th>用途</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for obj in queryset %}
+                    <tr>
+                        <th>{{ obj.time|date:"Y-m-d" }}</th>
+                        <td>{{ obj.money }}</td>
+                        <td>{{ obj.uses }}</td>
+                        <td>
+                            <a class="btn btn-primary btn-xs" href="/check/{{obj.id}}/edit">编辑</a>
+                            <a class="btn btn-danger btn-xs" href="/check/{{obj.id}}/delete">删除</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+ </div>
+
+
+
+
+
+</body>
+</html>
